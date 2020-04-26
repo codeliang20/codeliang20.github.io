@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>基于Hexo编写博客的b步骤 | Hexo</title>
+  <title>BOM对象打开新窗口的几种方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一步 以管理员的身份打开cmd; 切换根目录至System32\blog   命令：cd blog&#x2F;第二步 开启hexo服务       命令：hexo s第三步 使用hexo命令新建博客文件         命令：hexo n &quot;文件名称&quot;第四步 打开博客文件，以管理员的身份使用notepad++打开第五步 hexo g         hexo d   （上传到云端）">
+  <meta name="description" content="Window.open()  Window.open(“http:&#x2F;&#x2F;www.w3school.com.cn&quot;);  location.herf  location.href &#x3D; “http:&#x2F;&#x2F;www.w3school.com.cn&quot;;  location.replace()  location.replace(“http:&#x2F;&#x2F;www.w3school.com.cn&amp;quo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于Hexo编写博客的b步骤">
-<meta property="og:url" content="http://yoursite.com/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84b%E6%AD%A5%E9%AA%A4/index.html">
+<meta property="og:title" content="BOM对象打开新窗口的几种方法">
+<meta property="og:url" content="http://yoursite.com/2020/04/26/BOM%E5%AF%B9%E8%B1%A1%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一步 以管理员的身份打开cmd; 切换根目录至System32\blog   命令：cd blog&#x2F;第二步 开启hexo服务       命令：hexo s第三步 使用hexo命令新建博客文件         命令：hexo n &quot;文件名称&quot;第四步 打开博客文件，以管理员的身份使用notepad++打开第五步 hexo g         hexo d   （上传到云端）">
+<meta property="og:description" content="Window.open()  Window.open(“http:&#x2F;&#x2F;www.w3school.com.cn&quot;);  location.herf  location.href &#x3D; “http:&#x2F;&#x2F;www.w3school.com.cn&quot;;  location.replace()  location.replace(“http:&#x2F;&#x2F;www.w3school.com.cn&amp;quo">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-21T11:09:51.000Z">
-<meta property="article:modified_time" content="2020-04-21T13:23:35.279Z">
+<meta property="article:published_time" content="2020-04-26T02:01:45.000Z">
+<meta property="article:modified_time" content="2020-04-26T02:56:57.511Z">
 <meta property="article:author" content="coder liang">
 <meta name="twitter:card" content="summary">
   
@@ -154,34 +154,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-基于Hexo编写博客的b步骤" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-BOM对象打开新窗口的几种方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      基于Hexo编写博客的b步骤
+      BOM对象打开新窗口的几种方法
     </h1>
   
 
         
-        <a href="/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84b%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
-  	<time datetime="2020-04-21T11:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
+        <a href="/2020/04/26/BOM%E5%AF%B9%E8%B1%A1%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-26T02:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>第一步</p>
-<pre><code>以管理员的身份打开cmd;
-切换根目录至System32\blog   命令：cd blog/</code></pre><p>第二步</p>
-<pre><code>开启hexo服务       命令：hexo s</code></pre><p>第三步</p>
-<pre><code>使用hexo命令新建博客文件         命令：hexo n &quot;文件名称&quot;</code></pre><p>第四步</p>
-<pre><code>打开博客文件，以管理员的身份使用notepad++打开</code></pre><p>第五步</p>
-<pre><code>hexo g        
-hexo d   （上传到云端）</code></pre>
+        <ol>
+<li><p>Window.open()</p>
+<p> Window.open(“<a href="http://www.w3school.com.cn&quot;" target="_blank" rel="noopener">http://www.w3school.com.cn&quot;</a>);</p>
+</li>
+<li><p>location.herf</p>
+<p> location.href = “<a href="http://www.w3school.com.cn&quot;" target="_blank" rel="noopener">http://www.w3school.com.cn&quot;</a>;</p>
+</li>
+<li><p>location.replace()</p>
+<p> location.replace(“<a href="http://www.w3school.com.cn&quot;" target="_blank" rel="noopener">http://www.w3school.com.cn&quot;</a>);</p>
+</li>
+<li><p>location.assign()</p>
+<p> location.assign(“<a href="http://www.w3school.com.cn&quot;" target="_blank" rel="noopener">http://www.w3school.com.cn&quot;</a>);</p>
+<p> 其中window对象打开一个新窗口<br> 而location对象不打卡新窗口，将在原来窗口中打开新的地址</p>
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><pre><code>&quot;http://www.w3school.com.cn&quot;</code></pre>
       
 
       
@@ -260,7 +268,7 @@ hexo d   （上传到云端）</code></pre>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84b%E6%AD%A5%E9%AA%A4/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/26/BOM%E5%AF%B9%E8%B1%A1%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,8 +283,8 @@ hexo d   （上传到云端）</code></pre>
 <nav id="article-nav">
   
   
-    <a href="/2020/04/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客文章</div>
+    <a href="/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于Hexo编写博客的b步骤</div>
       <i class="icon-circle-right"></i>
     </a>
   
