@@ -18,7 +18,7 @@
 <meta property="og:description" content="Servlet生命周期有4个步骤： Servlet加载：1次 Servlet初始化：1次 Servlet服务：多次 Servlet销毁：1次  对于Servlet来说，生命周期对应的方法是： Servlet加载：    由tomcat自动执行 Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作 Servlet服务： service(),doG">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-21T08:13:56.000Z">
-<meta property="article:modified_time" content="2020-05-21T09:11:58.900Z">
+<meta property="article:modified_time" content="2020-05-21T09:18:03.650Z">
 <meta property="article:author" content="coder liang">
 <meta property="article:tag" content="Servlet生命周期">
 <meta name="twitter:card" content="summary">
@@ -252,6 +252,7 @@
 <li>Servlet销毁:  destory();</li>
 </ul>
 <a id="more"></a>
+
 <p>这时候我们通过eclipse去创建一个Servlet,并复写它的init(),service(),doGet(),doPost(),destory()方法</p>
 <pre><code>@WebServlet(&quot;/ServletDemo02&quot;)
 public class ServletDemo02 extends HttpServlet {
