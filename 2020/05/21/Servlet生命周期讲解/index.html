@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Servlet生命周期有4个步骤：  Servlet加载：1次 Servlet初始化：1次 Servlet服务：多次 Servlet销毁：1次  对于Servlet来说，生命周期对应的方法是：  Servlet加载：    由tomcat自动执行 Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作init()，直接初始化操作 Servlet服">
+  <meta name="description" content="Servlet生命周期有4个步骤： Servlet加载：1次 Servlet初始化：1次 Servlet服务：多次 Servlet销毁：1次  对于Servlet来说，生命周期对应的方法是： Servlet加载：    由tomcat自动执行 Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作 Servlet服务： service(),doG">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Servlet生命周期讲解">
 <meta property="og:url" content="https://codeliang20.github.io/2020/05/21/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%B2%E8%A7%A3/index.html">
 <meta property="og:site_name" content="默">
-<meta property="og:description" content="Servlet生命周期有4个步骤：  Servlet加载：1次 Servlet初始化：1次 Servlet服务：多次 Servlet销毁：1次  对于Servlet来说，生命周期对应的方法是：  Servlet加载：    由tomcat自动执行 Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作init()，直接初始化操作 Servlet服">
+<meta property="og:description" content="Servlet生命周期有4个步骤： Servlet加载：1次 Servlet初始化：1次 Servlet服务：多次 Servlet销毁：1次  对于Servlet来说，生命周期对应的方法是： Servlet加载：    由tomcat自动执行 Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作 Servlet服务： service(),doG">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-21T08:13:56.000Z">
-<meta property="article:modified_time" content="2020-05-21T08:26:25.639Z">
+<meta property="article:modified_time" content="2020-05-21T09:11:58.900Z">
 <meta property="article:author" content="coder liang">
 <meta property="article:tag" content="Servlet生命周期">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">94字</span>
+      <span class="post-count">608字</span>
     </span>
   </span>
 
@@ -228,7 +228,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -239,19 +239,54 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Servlet生命周期有4个步骤：</p>
-<ul>
+    <h4 id="Servlet生命周期有4个步骤："><a href="#Servlet生命周期有4个步骤：" class="headerlink" title="Servlet生命周期有4个步骤："></a>Servlet生命周期有4个步骤：</h4><ul>
 <li>Servlet加载：1次</li>
 <li>Servlet初始化：1次</li>
 <li>Servlet服务：多次</li>
 <li>Servlet销毁：1次</li>
 </ul>
-<p>对于Servlet来说，生命周期对应的方法是：</p>
-<ul>
+<h4 id="对于Servlet来说，生命周期对应的方法是："><a href="#对于Servlet来说，生命周期对应的方法是：" class="headerlink" title="对于Servlet来说，生命周期对应的方法是："></a>对于Servlet来说，生命周期对应的方法是：</h4><ul>
 <li>Servlet加载：    由tomcat自动执行</li>
-<li>Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作<pre><code>init()，直接初始化操作</code></pre></li>
+<li>Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作</li>
 <li>Servlet服务： service(),doGet(),doPost();</li>
-<li>Servlet销毁:  destroy();</li>
+<li>Servlet销毁:  destory();</li>
+</ul>
+<a id="more"></a>
+<p>这时候我们通过eclipse去创建一个Servlet,并复写它的init(),service(),doGet(),doPost(),destory()方法</p>
+<pre><code>@WebServlet(&quot;/ServletDemo02&quot;)
+public class ServletDemo02 extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public void init(ServletConfig config) throws ServletException {
+        System.out.println(&quot;Servlet初始化&quot;);
+    }
+
+    public void destroy() {
+        System.out.println(&quot;Servlet销毁&quot;);
+    }
+
+
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println(&quot;service...&quot;);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println(&quot;get... or post...&quot;);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+
+}</code></pre><p>从运行到关闭服务器，在控制台中可以看到:<br>    五月 21, 2020 4:57:33 下午 org.apache.catalina.startup.Catalina start<br>    信息: Server startup in [1,778] milliseconds<br>    <span style="color:red ;">Servlet初始化</span><br>    <span style="color:red ;">service…</span><br>    五月 21, 2020 4:57:48 下午 org.apache.catalina.core.StandardServer await<br>    信息: A valid shutdown command was received via the shutdown port. Stopping the Server instance.<br>    五月 21, 2020 4:57:48 下午 org.apache.coyote.AbstractProtocol pause<br>    信息: Pausing ProtocolHandler [“http-nio-80”]<br>    五月 21, 2020 4:57:48 下午 org.apache.coyote.AbstractProtocol pause<br>    信息: Pausing ProtocolHandler [“ajp-nio-8009”]<br>    五月 21, 2020 4:57:49 下午 org.apache.catalina.core.StandardService stopInternal<br>    信息: 正在停止服务[Catalina]<br>    <span style="color:red ;">Servlet销毁</span><br>    五月 21, 2020 4:57:49 下午 org.apache.catalina.core.ApplicationContext log<br>    信息: SessionListener: contextDestroyed()<br>    五月 21, 2020 4:57:49 下午 org.apache.catalina.core.ApplicationContext log</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>Servlet初始化是在第一次服务之前执行</li>
+<li>初始化执行一次</li>
+<li>复写了携带参数的初始化之后，就不会调用不携带参数的初始化操作，只有没有编写携带参数的初始化操作时，才会执行不携带参数的初始化操作</li>
+<li>服务可以执行多次</li>
+<li>复写了service服务方法之后，doGet和doPost服务方法不会执行，所有的服务都调用service服务方法</li>
+<li>在Servlet的底层，是如何区分调用doGet还是doPost的呢？实际上service是一个最高的服务方法，当前的Servlet程序中没有复写service方法的时候，会调用父类的service方法，而且是由父类的service方法区分Servlet程序中到底是调用doGet还是doPost方法</li>
+<li>销毁操作时在Tomcat关闭之前执行，类似于“离开前的交代”</li>
 </ul>
 
     
@@ -561,6 +596,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Servlet生命周期</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -582,10 +621,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Servlet生命周期</a>
               </li>
             
             <div class="clearfix"></div>
