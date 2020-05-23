@@ -195,6 +195,200 @@
 
 
   
+    <article id="post-如何将请求地址映射为Servlet访问地址" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/23/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84%E4%B8%BAServlet%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/" target="_blank">如何将请求地址映射为Servlet访问地址</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/23/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84%E4%B8%BAServlet%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/" class="archive-article-date">
+        <time datetime="2020-05-23T15:14:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>如何将请求地址映射为Servlet访问地址呢？有两种方式：</strong></p>
+<ol>
+<li>通过配置文件，在web.xml中配置</li>
+<li>通过注解完成Servlet地址映射</li>
+</ol>
+<h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- </span><br><span class="line"></span><br><span class="line"> 一个Servlet可以配置多个映射地址，但是一个映射地址不可以配置到多个Servlet上</span><br><span class="line"></span><br><span class="line"> --&gt;</span><br><span class="line"></span><br><span class="line"> &lt;servlet&gt;</span><br><span class="line"></span><br><span class="line"> &lt;servlet-name&gt;ServletDemo01&lt;/servlet-name&gt;</span><br><span class="line"></span><br><span class="line"> &lt;servlet-<span class="class"><span class="keyword">class</span>&gt;<span class="title">com</span>.<span class="title">it</span>.<span class="title">servlet</span>.<span class="title">ServletDemo01</span>&lt;/<span class="title">servlet</span>-<span class="title">class</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"> &lt;/<span class="title">servlet</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"> &lt;<span class="title">servlet</span>-<span class="title">mapping</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"> &lt;<span class="title">servlet</span>-<span class="title">name</span>&gt;<span class="title">ServletDemo01</span>&lt;/<span class="title">servlet</span>-<span class="title">name</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"> &lt;<span class="title">url</span>-<span class="title">pattern</span>&gt;/<span class="title">abc</span>/<span class="title">serlvet01</span>&lt;/<span class="title">url</span>-<span class="title">pattern</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"> &lt;/<span class="title">servlet</span>-<span class="title">mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@WebServlet(urlPatterns= &#123;"/123","/321"&#125;) //通过注解给Servlet映射多个URL地址</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/a123"</span>)<span class="comment">//映射一个URL地址</span></span><br></pre></td></tr></table></figure>
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Servlet</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/23/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84%E4%B8%BAServlet%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-get提交和post提交的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/23/get%E6%8F%90%E4%BA%A4%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E7%9A%84%E5%8C%BA%E5%88%AB/" target="_blank">get提交和post提交的区别</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/23/get%E6%8F%90%E4%BA%A4%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+        <time datetime="2020-05-23T12:19:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>在开发中，我们都知道，表单的提交有两种方式：</p>
+<p><strong>· get提交</strong></p>
+<p><strong>· post提交</strong></p>
+<p>这两种提交有何区别呢？通过比较观察就可以发现get提交和post提交的区别：</p>
+<h4 id="·-get提交"><a href="#·-get提交" class="headerlink" title="· get提交"></a>· get提交</h4><ul>
+<li>提交的内容会显示在地址栏</li>
+<li>比如一些关键的信息，用户名和密码，肯定不能在地址栏显示，所以get提交是不安全的提交</li>
+<li>地址栏最多只能存放4-5k的内容，所以如果提交内容过多的话，肯定会造成丢失</li>
+<li>效率高</li>
+</ul>
+<h4 id="post提交"><a href="#post提交" class="headerlink" title=". post提交"></a>. post提交</h4><ul>
+<li>提交的内容不会显示在地址栏</li>
+<li>是安全的提交</li>
+<li>不受地址栏大小的限制，理论上来说提交的内容是任意多的，但是太大的话也会收到http协议的限制</li>
+<li>效率低</li>
+</ul>
+<p>综上所述：在开发中到底是使用get提交还是post提交呢？需要根据需求而定，如果涉及到安全性比较高的话，肯定使用post提交，不涉及到安全问题，一般使用get提交。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaWeb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/23/get%E6%8F%90%E4%BA%A4%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E7%9A%84%E5%8C%BA%E5%88%AB/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Servlet生命周期讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -595,88 +789,10 @@
 
 
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
   
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" target="_blank">我的第一篇博客文章</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/04/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-        <time datetime="2020-04-21T07:14:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>##第一章</p>
-<p>内容</p>
-<hr>
-<p>##第二章</p>
-<p>内容</p>
-<hr>
-<p>##参考文献</p>
-<p><a href="http://www.codesheep.cn" target="_blank" rel="noopener">www.codesheep.cn</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -797,10 +913,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Servlet生命周期</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -822,6 +934,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Servlet生命周期</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
               </li>
             
             <div class="clearfix"></div>
