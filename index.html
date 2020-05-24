@@ -195,6 +195,104 @@
 
 
   
+    <article id="post-DAO设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">DAO设计模式</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+        <time datetime="2020-05-24T09:50:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="DAO设计模式的介绍"><a href="#DAO设计模式的介绍" class="headerlink" title="DAO设计模式的介绍"></a>DAO设计模式的介绍</h3><p>​    <strong>DAO:Data Access Object</strong>,数据访问对象，主要的功能就是进行数据库数据的操作，在程序的标准开发来说，属于数据访问层或者叫做持久化层。</p>
+<p>在几乎所有的面向对象的语言中，进行数据库操作都需要遵守DAO设计模式，所以和语言无关，Java有23中设计模式，但是DAO并不是Java独有的，不能成为23中设计模式中的一种。针对目前所学习的技术来说，我们也可以模拟出企业的开发架构：</p>
+<ul>
+<li>客户层：浏览器</li>
+<li>显示层：又可以叫做展示出、展现出、表现出，也即使用jsp/Servlet/html进行页面效果显示</li>
+<li>控制层：使用Servlet完成，是连接显示层和业务层</li>
+<li>业务层：service层，具体进行业务处理，是连接控制层和持久化层，并且进行一些业务的处理，比如事务等</li>
+<li>持久化层：也叫作数据访问层，JDBC完成</li>
+<li>数据库：MySQL/Oracle</li>
+</ul>
+<h3 id="DAO组成"><a href="#DAO组成" class="headerlink" title="DAO组成"></a>DAO组成</h3><p>​    在整个DAO中，实际的操作都是以DAO接口为标准的，即Service层通过DAO接口进行数据库操作，DAO的组成如下：</p>
+    
+    <a class="article-more-a" href="/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DAO设计模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-如何将请求地址映射为Servlet访问地址" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -693,102 +791,6 @@
 
 
   
-    <article id="post-基于Hexo编写博客的步骤" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" target="_blank">基于Hexo编写博客的步骤</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
-        <time datetime="2020-04-21T11:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>第一步</p>
-<pre><code>以管理员的身份打开cmd;
-切换根目录至System32\blog   命令：cd blog/</code></pre><p>第二步</p>
-<pre><code>开启hexo服务       命令：hexo s</code></pre><p>第三步</p>
-<pre><code>使用hexo命令新建博客文件         命令：hexo n &quot;文件名称&quot;</code></pre>
-    
-    <a class="article-more-a" href="/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">写博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/21/%E5%9F%BA%E4%BA%8EHexo%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -946,6 +948,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DAO设计模式</a>
               </li>
             
             <div class="clearfix"></div>

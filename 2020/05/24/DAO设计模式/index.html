@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://codeliang20.github.io">
-  <title>Tag: BOM | 默</title>
+  <title>DAO设计模式 | 默</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="默">
-<meta property="og:url" content="https://codeliang20.github.io/tags/BOM/index.html">
+  <meta name="description" content="DAO设计模式的介绍​    DAO:Data Access Object,数据访问对象，主要的功能就是进行数据库数据的操作，在程序的标准开发来说，属于数据访问层或者叫做持久化层。 在几乎所有的面向对象的语言中，进行数据库操作都需要遵守DAO设计模式，所以和语言无关，Java有23中设计模式，但是DAO并不是Java独有的，不能成为23中设计模式中的一种。针对目前所学习的技术来说，我们也可以模拟出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DAO设计模式">
+<meta property="og:url" content="https://codeliang20.github.io/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="默">
+<meta property="og:description" content="DAO设计模式的介绍​    DAO:Data Access Object,数据访问对象，主要的功能就是进行数据库数据的操作，在程序的标准开发来说，属于数据访问层或者叫做持久化层。 在几乎所有的面向对象的语言中，进行数据库操作都需要遵守DAO设计模式，所以和语言无关，Java有23中设计模式，但是DAO并不是Java独有的，不能成为23中设计模式中的一种。针对目前所学习的技术来说，我们也可以模拟出">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-24T09:50:17.000Z">
+<meta property="article:modified_time" content="2020-05-24T10:01:39.190Z">
 <meta property="article:author" content="coder liang">
+<meta property="article:tag" content="DAO设计模式">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="默" type="application/atom+xml">
@@ -181,80 +186,275 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-DAO设计模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/26/BOM%E5%AF%B9%E8%B1%A1%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" class="archive-article-date">
-        <time datetime="2020-04-26T02:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-26</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/26/BOM%E5%AF%B9%E8%B1%A1%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" target="_blank">BOM对象打开新窗口的几种方法</a>
   
+    <h1 class="article-title" itemprop="name">
+      DAO设计模式
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+        <time datetime="2020-05-24T09:50:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">757字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="DAO设计模式的介绍"><a href="#DAO设计模式的介绍" class="headerlink" title="DAO设计模式的介绍"></a>DAO设计模式的介绍</h3><p>​    <strong>DAO:Data Access Object</strong>,数据访问对象，主要的功能就是进行数据库数据的操作，在程序的标准开发来说，属于数据访问层或者叫做持久化层。</p>
+<p>在几乎所有的面向对象的语言中，进行数据库操作都需要遵守DAO设计模式，所以和语言无关，Java有23中设计模式，但是DAO并不是Java独有的，不能成为23中设计模式中的一种。针对目前所学习的技术来说，我们也可以模拟出企业的开发架构：</p>
+<ul>
+<li>客户层：浏览器</li>
+<li>显示层：又可以叫做展示出、展现出、表现出，也即使用jsp/Servlet/html进行页面效果显示</li>
+<li>控制层：使用Servlet完成，是连接显示层和业务层</li>
+<li>业务层：service层，具体进行业务处理，是连接控制层和持久化层，并且进行一些业务的处理，比如事务等</li>
+<li>持久化层：也叫作数据访问层，JDBC完成</li>
+<li>数据库：MySQL/Oracle</li>
+</ul>
+<h3 id="DAO组成"><a href="#DAO组成" class="headerlink" title="DAO组成"></a>DAO组成</h3><p>​    在整个DAO中，实际的操作都是以DAO接口为标准的，即Service层通过DAO接口进行数据库操作，DAO的组成如下：</p>
+<a id="more"></a>
+
+<ul>
+<li>实体类：表示数据库表中每一笔数据，就是实体类的一个对象，现阶段我们必须手动进行封装，框架之后，可以自动的将数据表中每一笔数据封装成实体类的一个对象，数据库中每一个表或者一个视图就对应一个实体类，实体类的命名方式表名的驼峰写法，实体类中的属性也是数据库表或者视图数据列的驼峰写法。</li>
+<li>DAO接口：主要定义一系列原子性的数据库的操作，比如增删改查等等，DAO接口的命名方式实体类名+Dao，DAO接口中的方法命名方式：</li>
+</ul>
+<p>​     比如查询操作：</p>
+<p>​    selectXxxByYyy（），表示根据Yyy查找Xxx</p>
+<p>​     getXxxByYyy（）</p>
+<p>​    findXxxByYyy（）</p>
+<p>​    比如增删改操作：insertXxx/doInsertXxx,updateXxx/doUpdateXxx,deleteXxx/doDeleteXxx</p>
+<ul>
+<li>实现类：也叫作真实主题类，实现了DAO接口，具体的完成数据库增删改查操作，而且这个类不去负责数据库连接的取得和关闭，在原生开发中需要编写，在框架中我们使用MyBatis能够自动的产生实现类的代理对象</li>
+<li>代理实现类：代理真实主题类完成数据库连接的取得和关闭，并且调用真实主题类，而且也是实现了DAO接口的，目前的原生开发必须使用代理实现类，后期框架中，通过数据库连接池技术处理数据库连接的获取和关闭</li>
+<li>工厂类：负责生产DAO对象，以便业务层能够更方便的访问，目前的原生开发必须使用工厂类，后期的框架中，Spring的IOC容器负责生产和自动装配对象。</li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          coder liang
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://codeliang20.github.io/2020/05/24/DAO设计模式/" title="DAO设计模式" target="_blank">https://codeliang20.github.io/2020/05/24/DAO设计模式/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BOM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">新窗口</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DAO设计模式</a>
         		</li>
       		
 		</ul>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://codeliang20.github.io/2020/05/24/DAO%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/23/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84%E4%B8%BAServlet%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何将请求地址映射为Servlet访问地址</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+  <div id="giteement-ctn"></div>
+  
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
+  
+  <script>
+  <!-- id: "DAO设计模式" -->
+  var giteement = new Giteement({
+    id: '20200524175017',
+    owner: '',
+    repo: '',
+    backcall_uri: '',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '',
+      client_secret: ''
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
+
+
+
+
+
+
 
 
           </div>
@@ -286,9 +486,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
