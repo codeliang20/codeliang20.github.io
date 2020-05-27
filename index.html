@@ -195,6 +195,100 @@
 
 
   
+    <article id="post-过滤器实现统一编码以及过滤非法文字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/27/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%BB%9F%E4%B8%80%E7%BC%96%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%BF%87%E6%BB%A4%E9%9D%9E%E6%B3%95%E6%96%87%E5%AD%97/" target="_blank">过滤器实现统一编码以及过滤非法文字</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/27/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%BB%9F%E4%B8%80%E7%BC%96%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%BF%87%E6%BB%A4%E9%9D%9E%E6%B3%95%E6%96%87%E5%AD%97/" class="archive-article-date">
+        <time datetime="2020-05-27T05:03:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="一、新建过滤器"><a href="#一、新建过滤器" class="headerlink" title="一、新建过滤器"></a>一、新建过滤器</h4><p>首先要新建一个过滤器，通过注解完成Filter配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过注解完成Filter配置，/*表示过滤所有请求</span></span><br><span class="line"></span><br><span class="line">​	<span class="meta">@WebFilter</span>(<span class="string">"/*"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>现在所有的页面都被过滤掉了，全部不能进行正常的请求，我们只需在doFilter()方法中写上</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line">​	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response, FilterChain chain)</span>  <span class="keyword">throws</span> IOException, ServletException</span>&#123;</span><br><span class="line"></span><br><span class="line">​		chain.doFilter(request, response);<span class="comment">//继续执行，表示请求继续执行</span></span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、进行操作"><a href="#二、进行操作" class="headerlink" title="二、进行操作"></a>二、进行操作</h4><p>接下来我们就可以在doFilter()方法里面进行统一编码和过滤非法文字（注意：这里的非法文字指的是参数中的非法文字）</p>
+    
+    <a class="article-more-a" href="/2020/05/27/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%BB%9F%E4%B8%80%E7%BC%96%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%BF%87%E6%BB%A4%E9%9D%9E%E6%B3%95%E6%96%87%E5%AD%97/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">过滤器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/27/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%AE%9E%E7%8E%B0%E7%BB%9F%E4%B8%80%E7%BC%96%E7%A0%81%E4%BB%A5%E5%8F%8A%E8%BF%87%E6%BB%A4%E9%9D%9E%E6%B3%95%E6%96%87%E5%AD%97/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-你所不知道的web-xml的其他配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -678,106 +772,6 @@
 
 
   
-    <article id="post-jQuery设置对象css属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/" target="_blank">jQuery设置对象css属性</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/" class="archive-article-date">
-        <time datetime="2020-05-02T13:26:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <br>
-
-<h2 id="jQuery提供两种方式设置css属性"><a href="#jQuery提供两种方式设置css属性" class="headerlink" title="jQuery提供两种方式设置css属性"></a>jQuery提供两种方式设置css属性</h2><h3 id="1-通过-css"><a href="#1-通过-css" class="headerlink" title="1.通过$().css()"></a>1.通过$().css()</h3><blockquote>
-<h4 id="1-1设置单个样式，如：设置div盒子背景颜色为红色"><a href="#1-1设置单个样式，如：设置div盒子背景颜色为红色" class="headerlink" title="1.1设置单个样式，如：设置div盒子背景颜色为红色"></a>1.1设置单个样式，如：设置div盒子背景颜色为红色</h4></blockquote>
-<pre><code>$(&quot;div&quot;).css(&quot;background-color&quot;,&quot;red&quot;)</code></pre><br>
-
-<blockquote>
-<h4 id="1-2设置多个样式"><a href="#1-2设置多个样式" class="headerlink" title="1.2设置多个样式"></a>1.2设置多个样式</h4></blockquote>
-<pre><code>$(&quot;div&quot;).css(&quot;background-color&quot;:&quot;red&quot;,&quot;border&quot;:&quot;2px yellow solid&quot;)</code></pre>
-    
-    <a class="article-more-a" href="/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -943,6 +937,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">web.xml</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">过滤器</a>
               </li>
             
             <div class="clearfix"></div>
