@@ -195,6 +195,100 @@
 
 
   
+    <article id="post-解决Jsp获取本页面表单提交值为null的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/05/28/%E8%A7%A3%E5%86%B3Jsp%E8%8E%B7%E5%8F%96%E6%9C%AC%E9%A1%B5%E9%9D%A2%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%80%BC%E4%B8%BAnull%E7%9A%84%E6%96%B9%E6%B3%95/" target="_blank">解决Jsp获取本页面表单提交值为null的方法</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/05/28/%E8%A7%A3%E5%86%B3Jsp%E8%8E%B7%E5%8F%96%E6%9C%AC%E9%A1%B5%E9%9D%A2%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%80%BC%E4%B8%BAnull%E7%9A%84%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <time datetime="2020-05-28T13:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>今天博主遇到一个小问题，在本页面进行form表单提交时，获取的参数值为null。</p>
+<h4 id="抛出问题"><a href="#抛出问题" class="headerlink" title="抛出问题"></a>抛出问题</h4><p>​    不多说，看代码：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"$&#123;pageContext.request.contextPath&#125;/test/money01.jsp"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line"> 		应付款：&lt;input type=<span class="string">"text"</span> name=<span class="string">"pay"</span>&gt;</span><br><span class="line"> 		&lt;br&gt;</span><br><span class="line"> 		实际付款：&lt;input type=<span class="string">"text"</span> name=<span class="string">"actuallyPay"</span>&gt;</span><br><span class="line"> 		&lt;br&gt;</span><br><span class="line"> 		&lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span> &gt; </span><br><span class="line"> 	&lt;/form&gt;</span><br><span class="line"> 	&lt;%</span><br><span class="line"> 			System.out.print(request.getParameter(<span class="string">"pay"</span>));</span><br><span class="line"> 			<span class="keyword">int</span> pay = Integer.parseInt(request.getParameter(<span class="string">"pay"</span>));</span><br><span class="line"> 			<span class="keyword">int</span> actuallyPay = Integer.parseInt(request.getParameter(<span class="string">"actuallyPay"</span>));</span><br><span class="line"> 	 %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后我们打开tomcat运行一下，并可以在控制台上看到：</p>
+<p><img src="https://liang20.oss-cn-hangzhou.aliyuncs.com/img/1.PNG" alt=""></p>
+<p>​                                                            图1-1 浏览器页面报错</p>
+    
+    <a class="article-more-a" href="/2020/05/28/%E8%A7%A3%E5%86%B3Jsp%E8%8E%B7%E5%8F%96%E6%9C%AC%E9%A1%B5%E9%9D%A2%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%80%BC%E4%B8%BAnull%E7%9A%84%E6%96%B9%E6%B3%95/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Jsp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/05/28/%E8%A7%A3%E5%86%B3Jsp%E8%8E%B7%E5%8F%96%E6%9C%AC%E9%A1%B5%E9%9D%A2%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%80%BC%E4%B8%BAnull%E7%9A%84%E6%96%B9%E6%B3%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-过滤器实现统一编码以及过滤非法文字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -673,105 +767,6 @@
 
 
   
-    <article id="post-Servlet生命周期讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/21/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%B2%E8%A7%A3/" target="_blank">Servlet生命周期讲解</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/21/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
-        <time datetime="2020-05-21T08:13:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h4 id="Servlet生命周期有4个步骤："><a href="#Servlet生命周期有4个步骤：" class="headerlink" title="Servlet生命周期有4个步骤："></a>Servlet生命周期有4个步骤：</h4><ul>
-<li>Servlet加载：1次</li>
-<li>Servlet初始化：1次</li>
-<li>Servlet服务：多次</li>
-<li>Servlet销毁：1次</li>
-</ul>
-<h4 id="对于Servlet来说，生命周期对应的方法是："><a href="#对于Servlet来说，生命周期对应的方法是：" class="headerlink" title="对于Servlet来说，生命周期对应的方法是："></a>对于Servlet来说，生命周期对应的方法是：</h4><ul>
-<li>Servlet加载：    由tomcat自动执行</li>
-<li>Servlet初始化：init(ServletConfig config),可以获得初始化参数的初始化操作</li>
-<li>Servlet服务： service(),doGet(),doPost();</li>
-<li>Servlet销毁:  destory();</li>
-</ul>
-    
-    <a class="article-more-a" href="/2020/05/21/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%B2%E8%A7%A3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Servlet生命周期</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/21/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%B2%E8%A7%A3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -941,6 +936,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">过滤器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Jsp</a>
               </li>
             
             <div class="clearfix"></div>
