@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://codeliang20.github.io">
-  <title>jQuery设置对象css属性 | 默</title>
+  <title>监听器实现查看在线用户列表 | 默</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="jQuery提供两种方式设置css属性1.通过$().css() 1.1设置单个样式，如：设置div盒子背景颜色为红色 $(&quot;div&quot;).css(&quot;background-color&quot;,&quot;red&quot;)   1.2设置多个样式 $(&quot;div&quot;).css(&quot;background-color&quot;:&amp;quot">
+  <meta name="description" content="需求说明​    实现用户登录时，可查看在线用户列表；用户注销时，其信息从用户列表中删除。 实现思路​    我们可以使用监听器来完成，实现3个监听器的接口 1234567&#x2F;** * ServletContextListener:服务器启动时,将一个集合放入到application域中 * HttpSessionAttributeListener：用户登录时，用户信息会保存到session域中，我">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery设置对象css属性">
-<meta property="og:url" content="https://codeliang20.github.io/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/index.html">
+<meta property="og:title" content="监听器实现查看在线用户列表">
+<meta property="og:url" content="https://codeliang20.github.io/2020/05/31/%E7%9B%91%E5%90%AC%E5%99%A8%E5%AE%9E%E7%8E%B0%E6%9F%A5%E7%9C%8B%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E5%88%97%E8%A1%A8/index.html">
 <meta property="og:site_name" content="默">
-<meta property="og:description" content="jQuery提供两种方式设置css属性1.通过$().css() 1.1设置单个样式，如：设置div盒子背景颜色为红色 $(&quot;div&quot;).css(&quot;background-color&quot;,&quot;red&quot;)   1.2设置多个样式 $(&quot;div&quot;).css(&quot;background-color&quot;:&amp;quot">
+<meta property="og:description" content="需求说明​    实现用户登录时，可查看在线用户列表；用户注销时，其信息从用户列表中删除。 实现思路​    我们可以使用监听器来完成，实现3个监听器的接口 1234567&#x2F;** * ServletContextListener:服务器启动时,将一个集合放入到application域中 * HttpSessionAttributeListener：用户登录时，用户信息会保存到session域中，我">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-02T13:26:20.000Z">
-<meta property="article:modified_time" content="2020-05-02T14:03:04.092Z">
+<meta property="article:published_time" content="2020-05-31T08:20:40.000Z">
+<meta property="article:modified_time" content="2020-05-31T08:26:11.437Z">
 <meta property="article:author" content="coder liang">
-<meta property="article:tag" content="jQuery">
-<meta property="article:tag" content="css">
+<meta property="article:tag" content="监听器">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="默" type="application/atom+xml">
@@ -187,14 +186,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jQuery设置对象css属性" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-监听器实现查看在线用户列表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      jQuery设置对象css属性
+      监听器实现查看在线用户列表
     </h1>
   
 
@@ -206,8 +205,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/" class="archive-article-date">
-        <time datetime="2020-05-02T13:26:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
+<a href="/2020/05/31/%E7%9B%91%E5%90%AC%E5%99%A8%E5%AE%9E%E7%8E%B0%E6%9F%A5%E7%9C%8B%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E5%88%97%E8%A1%A8/" class="archive-article-date">
+        <time datetime="2020-05-31T08:20:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-31</time>
 </a>
 
   
@@ -220,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">118字</span>
+      <span class="post-count">658字</span>
     </span>
   </span>
 
@@ -229,7 +228,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -240,21 +239,73 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <br>
+    <h4 id="需求说明"><a href="#需求说明" class="headerlink" title="需求说明"></a>需求说明</h4><p>​    实现用户登录时，可查看在线用户列表；用户注销时，其信息从用户列表中删除。</p>
+<h4 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h4><p>​    我们可以使用监听器来完成，实现3个监听器的接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * ServletContextListener:服务器启动时,将一个集合放入到application域中</span></span><br><span class="line"><span class="comment"> * HttpSessionAttributeListener：用户登录时，用户信息会保存到session域中，我们将session域中的信	      息保存到application域中</span></span><br><span class="line"><span class="comment"> * HttpSessionListener：用户注销时，将application域中的当前用户信息移除</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span></span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="jQuery提供两种方式设置css属性"><a href="#jQuery提供两种方式设置css属性" class="headerlink" title="jQuery提供两种方式设置css属性"></a>jQuery提供两种方式设置css属性</h2><h3 id="1-通过-css"><a href="#1-通过-css" class="headerlink" title="1.通过$().css()"></a>1.通过$().css()</h3><blockquote>
-<h4 id="1-1设置单个样式，如：设置div盒子背景颜色为红色"><a href="#1-1设置单个样式，如：设置div盒子背景颜色为红色" class="headerlink" title="1.1设置单个样式，如：设置div盒子背景颜色为红色"></a>1.1设置单个样式，如：设置div盒子背景颜色为红色</h4></blockquote>
-<pre><code>$(&quot;div&quot;).css(&quot;background-color&quot;,&quot;red&quot;)</code></pre><br>
+<p>​    然后我们可以在用户列表的页面中输出application域集合中的用户信息，用户点击注销时，重定向到登录页面。</p>
+<h4 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h4><pre><code>@WebListener
+public class OnlineListener implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener {
 
-<blockquote>
-<h4 id="1-2设置多个样式"><a href="#1-2设置多个样式" class="headerlink" title="1.2设置多个样式"></a>1.2设置多个样式</h4></blockquote>
-<pre><code>$(&quot;div&quot;).css(&quot;background-color&quot;:&quot;red&quot;,&quot;border&quot;:&quot;2px yellow solid&quot;)</code></pre><a id="more"></a>
+private List&lt;String&gt; onlineList;    //全局变量，保存用户信息的集合
+private ServletContext application;    //application域对象
 
-<h3 id="2-通过方法addClass"><a href="#2-通过方法addClass" class="headerlink" title="2.通过方法addClass()"></a>2.通过方法addClass()</h3><blockquote>
-<h4 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h4><pre><code>使用这个方法需提前写好样式，例：
-    .box{background-color: red; border: 2px solid yellow}        
-而后在脚本里操作
-    $(&quot;div&quot;).addClass(&quot;box&quot;)</code></pre></blockquote>
+public void sessionCreated(HttpSessionEvent event)  {          
+}
+
+//用户的注销
+public void sessionDestroyed(HttpSessionEvent event)  { 
+
+    //获得注销的session
+    HttpSession session = event.getSession();
+    //获得注销的session域中的信息
+    AccInfo accInfo = (AccInfo) session.getAttribute(&quot;accInfo&quot;);
+    //获得application域对象的集合
+    onlineList = (List&lt;String&gt;) this.application.getAttribute(&quot;onlines&quot;);
+    //将要注销的用户名从集合移除
+    onlineList.remove(accInfo.getAccRealName());
+    //将移除后的集合放入application域中
+    application.setAttribute(&quot;onlines&quot;, onlineList);
+}
+public void contextDestroyed(ServletContextEvent event)  {         
+}
+
+//session的增加
+public void attributeAdded(HttpSessionBindingEvent event)  { 
+     //session的增加，表示用户登录了，AccInfo指的是用户实体类
+    AccInfo accInfo = (AccInfo) event.getValue();
+    String realName = accInfo.getAccRealName();
+    //获取application域对象的集合
+    onlineList = (List&lt;String&gt;) this.application.getAttribute(&quot;onlines&quot;);
+    //将登录的用户名添加到集合中
+    onlineList.add(realName);
+    //将修改后的集合放入application域中
+    application.setAttribute(&quot;onlines&quot;, onlineList);
+}
+public void attributeRemoved(HttpSessionBindingEvent event)  {      
+}
+
+public void attributeReplaced(HttpSessionBindingEvent event)  {     
+}
+public void contextInitialized(ServletContextEvent event)  { 
+     //服务器启动时，我们将一个空的集合放入到application域中
+    onlineList = new ArrayList&lt;&gt;();
+    application = event.getServletContext();
+    application.setAttribute(&quot;onlines&quot;, onlineList);
+}
+}</code></pre><p>以上是监听器中的代码，接下来我们就可以来输出用户信息到页面上来了。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;在线用户列表&lt;/h1&gt;</span><br><span class="line"> 	&lt;%</span><br><span class="line"> 		List&lt;String&gt; onlines = (List&lt;String&gt;) application.getAttribute(<span class="string">"onlines"</span>);</span><br><span class="line"> 		<span class="keyword">for</span>(String onlineNames : onlines)&#123;</span><br><span class="line"> 			%&gt;</span><br><span class="line"></span><br><span class="line"> 			&lt;h2&gt;&lt;%= onlineNames %&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line"> 			&lt;%</span><br><span class="line"> 		&#125;</span><br><span class="line"> 	%&gt;</span><br><span class="line"> 	&lt;a href="invalidate.jsp"&gt;注销&lt;/a&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;%</span><br><span class="line"> 		session.invalidate();</span><br><span class="line"> 		response.sendRedirect(request.getContextPath()+<span class="string">"/login.jsp"</span>);</span><br><span class="line"> 	%&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p>以上两段代码分别是用户在线列表页面和用户注销页面。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>使用监听可以对application、session和request的范围属性进行监听</li>
+<li>使用ServletContextListener可以监听服务器的启动和关闭</li>
+<li>使用HttpSessionListener可以监听session的创建和session的注销</li>
+<li>使用HttpRequestListener可以监听请求的创建和销毁</li>
+</ul>
+<p>​    </p>
 
     
 
@@ -291,7 +342,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://codeliang20.github.io/2020/05/02/jQuery设置对象css属性/" title="jQuery设置对象css属性" target="_blank">https://codeliang20.github.io/2020/05/02/jQuery设置对象css属性/</a>
+          <a href="https://codeliang20.github.io/2020/05/31/监听器实现查看在线用户列表/" title="监听器实现查看在线用户列表" target="_blank">https://codeliang20.github.io/2020/05/31/监听器实现查看在线用户列表/</a>
         </li>
         
         <li>
@@ -313,11 +364,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">监听器</a>
         		</li>
       		
 		</ul>
@@ -373,7 +420,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://codeliang20.github.io/2020/05/02/jQuery%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1css%E5%B1%9E%E6%80%A7/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://codeliang20.github.io/2020/05/31/%E7%9B%91%E5%90%AC%E5%99%A8%E5%AE%9E%E7%8E%B0%E6%9F%A5%E7%9C%8B%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E5%88%97%E8%A1%A8/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -388,18 +435,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/05/21/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%B2%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Servlet生命周期讲解
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/26/BOM%E5%AF%B9%E8%B1%A1%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">BOM对象打开新窗口的几种方法</div>
+    <a href="/2020/05/28/%E8%A7%A3%E5%86%B3Jsp%E8%8E%B7%E5%8F%96%E6%9C%AC%E9%A1%B5%E9%9D%A2%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%80%BC%E4%B8%BAnull%E7%9A%84%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解决Jsp获取本页面表单提交值为null的方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -437,9 +475,9 @@
     <script src="/lib/giteement.browser.js"></script>
   
   <script>
-  <!-- id: "jQuery设置对象css属性" -->
+  <!-- id: "监听器实现查看在线用户列表" -->
   var giteement = new Giteement({
-    id: '20200502212620',
+    id: '20200531162040',
     owner: '',
     repo: '',
     backcall_uri: '',
